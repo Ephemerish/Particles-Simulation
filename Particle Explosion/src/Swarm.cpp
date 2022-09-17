@@ -11,4 +11,12 @@ namespace Daklit
 	{
 		delete[] m_pParticle; 
 	}
+
+	void Swarm	::update()
+	{
+		for (int i = 0; i < Swarm::nParticles; i++)
+		{
+			m_pParticle[i].update();
+		}
+	}
 }

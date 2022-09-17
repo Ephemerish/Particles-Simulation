@@ -79,6 +79,11 @@ namespace Daklit
 		SDL_RenderPresent(m_renderer);
 	}
 
+	void Screen::clear()
+	{
+		memset(m_buffer, 0, screenWidth * screenHeight * sizeof(Uint32));
+	}
+
 	bool Screen::processEvents()
 	{
 		SDL_Event event;

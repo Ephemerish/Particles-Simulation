@@ -7,10 +7,11 @@ namespace Daklit
 	private:
 		Particle* m_pParticle;
 	public:
-		const static int nParticles = 5000;
+		const static int nParticles = 2500;
 	public:
 		Swarm();
 		virtual ~Swarm();
+		void update();
 
 		const Particle* const getParticles() { return m_pParticle; };
 	};

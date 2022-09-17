@@ -23,6 +23,9 @@ int main(int argc, char* argv[])
 	{	
 		const Daklit::Particle * const pParticles = swarm.getParticles(); 
 		
+		screen.clear();
+		swarm.update();
+
 		Uint32 elapsed = SDL_GetTicks();
 		unsigned char red = (1 + sin(elapsed * 0.0001)) * 128;
 		unsigned char green = (1 + sin(elapsed * 0.0002)) * 128;
@@ -37,13 +40,6 @@ int main(int argc, char* argv[])
 
 			screen.setPixel(x, y, red, green, blue);
 		}
-
-
-
-		/*for (int y = 0; y < screen.screenHeight; y++)
-			for (int x = 0; x < screen.screenWidth; x++)
-				screen.setPixel(x, y, red, green, blue);*/
-
 
 		screen.update();
 
