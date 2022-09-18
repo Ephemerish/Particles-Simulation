@@ -6,13 +6,14 @@ namespace Daklit
 	public:
 		double m_x;
 		double m_y;
-		double m_xspeed;
-		double m_yspeed;
+		double m_direction;
+		double m_speed;
 
 	public:
 		Particle();
 		virtual ~Particle();
-		void update();
+		void init();
+		void update(int interval);
 	};
 }
 

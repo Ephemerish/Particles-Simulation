@@ -6,12 +6,13 @@ namespace Daklit
 	{
 	private:
 		Particle* m_pParticle;
+		int lastTime;
 	public:
-		const static int nParticles = 2500;
+		const static int nParticles = 7500;
 	public:
 		Swarm();
 		virtual ~Swarm();
-		void update();
+		void update(int elapsed);
 
 		const Particle* const getParticles() { return m_pParticle; };
 	};
