@@ -57,7 +57,6 @@ int main(int argc, char* argv[])
 		}
 	}
 
-	//ShowWindow(GetConsoleWindow(), SW_RESTORE);
 	screen.close();
 
 	return 0;
